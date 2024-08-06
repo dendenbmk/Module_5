@@ -5,12 +5,12 @@ class House:                                         # Создали Kласс 
 
 
     def go_to(self, namber_of_want_floor):       # Создали метод go_to, куда будем передовать кол-во этажей при вызове
-        self.number_of_floors                    # сделали доступным глобальный атрибут   number_of_floors
         if namber_of_want_floor > self.number_of_floors or namber_of_want_floor < 1:  # если передадим желаемый этаж
                                                    # больше чем number_of_floors или меньше 1, то ...
             print('Такого этажа не существует')    #  будет выводиться это сообщение
         else:                                      # иначе...
-            print(namber_of_want_floor)            # выведим желаемый этаж
+            for i in range(1, namber_of_want_floor + 1): # перебераем числа (этажы) от 1 до нужного...
+                print(i)                                     # и выводим в консоль
 
     def __len__(self):                     # Создали метод (волшебный) который возвращает кол-во этажей беря его из ...
         return self.number_of_floors             # ... атрибута number_of_floors
