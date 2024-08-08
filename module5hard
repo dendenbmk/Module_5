@@ -1,1 +1,34 @@
+class User:
 
+  def __init__(self, nickname, password, age): # пароль нужно ХЭШировать
+    self.nickname = nicknema
+    self.password = password
+    self.age = age
+
+
+
+
+class Video:
+
+  def __init__(self, title, duration, time_now=0, adult_mode=False):
+    self.title = title
+    self.duration = duration
+    self.time_now = time_now
+    self.adult_mode = adult_mode
+
+
+
+
+class UrTube:
+
+  def __init__(self, users, videos, current_user=False):
+    self.users = users
+    self.videos = videos
+    self.current_user = current_user
+
+
+  deg log_in(nickname, password):
+    if nicname  in users:
+      if password in usrrs[nicname]:   # принимаем строку, а прверяем ХЭШ
+        current_user = True
+    
