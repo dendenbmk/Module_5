@@ -27,7 +27,7 @@ class UrTube:
     self.current_user = current_user
 
 
-  deg log_in(nickname, password):
+  def log_in(nickname, password):
     if nicname  in users:
       if password in usrrs[nicname]:   # принимаем строку, а прверяем ХЭШ
         current_user = True
