@@ -17,6 +17,9 @@ class House:                                         # Создали Kласс 
                                                    # больше чем number_of_floors или меньше 1, то ...
             print('Такого этажа не существует')    #  будет выводиться это сообщение
         else:                                      # иначе...
+             
+            for i in range(1, namber_of_want_floor+1):
+                print(i)
             print(namber_of_want_floor)            # выведим желаемый этаж
 
 
