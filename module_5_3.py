@@ -6,11 +6,12 @@ class House:                                         # Создали Kласс 
 
     def go_to(self, namber_of_want_floor):       # Создали метод go_to, куда будем передовать кол-во этажей при вызове
         self.number_of_floors                    # сделали доступным глобальный атрибут   number_of_floors
-        if namber_of_want_floor > self.number_of_floors or namber_of_want_floor < 1:  # если передадим желаемый этаж
+        if isinstance(self.number_of_floors, int):
+            if namber_of_want_floor > self.number_of_floors or namber_of_want_floor < 1:  # если передадим желаемый этаж
                                                    # больше чем number_of_floors или меньше 1, то ...
-            print('Такого этажа не существует')    #  будет выводиться это сообщение
-        else:                                      # иначе...
-            print(namber_of_want_floor)            # выведим желаемый этаж
+                print('Такого этажа не существует')    #  будет выводиться это сообщение
+            else:                                      # иначе...
+                print(namber_of_want_floor)            # выведим желаемый этаж
 
 
     def __len__(self):                     # Создали метод (волшебный) который возвращает кол-во этажей беря его из ...
@@ -22,43 +23,50 @@ class House:                                         # Создали Kласс 
 
 
     def __lt__(self, other):
-        return self.number_of_floors < other.number_of_floors
+        if isinstance(self.number_of_floors, int):
+            return self.number_of_floors < other.number_of_floors
 
     def __eq__(self, other):
-        if self.number_of_floors == other.number_of_floors:
-            return True
-        else:
-            return False
+        if isinstance(self.number_of_floors, int):
+            if self.number_of_floors == other.number_of_floors:
+                return True
+            else:
+                return False
 
     def __lt__(self, other):
-        if self.number_of_floors < other.number_of_floors:
-            return True
-        else:
-            return False
+        if isinstance(self.number_of_floors, int):
+            if self.number_of_floors < other.number_of_floors:
+                return True
+            else:
+                return False
 
     def __le__(self, other):
-        if self.number_of_floors <= other.number_of_floors:
-            return True
-        else:
-            return False
+        if isinstance(self.number_of_floors, int):
+            if self.number_of_floors <= other.number_of_floors:
+                return True
+            else:
+                return False
 
     def __gt__(self, other):
-        if self.number_of_floors > other.number_of_floors:
-            return True
-        else:
-            return False
+        if isinstance(self.number_of_floors, int):
+            if self.number_of_floors > other.number_of_floors:
+                return True
+            else:
+                return False
 
     def __ge__(self, other):
-        if self.number_of_floors >= other.number_of_floors:
-            return True
-        else:
-            return False
+        if isinstance(self.number_of_floors, int):
+            if self.number_of_floors >= other.number_of_floors:
+                return True
+            else:
+                return False
 
     def __ne__(self, other):
-        if self.number_of_floors != other.number_of_floors:
-            return True
-        else:
-            return False
+        if isinstance(self.number_of_floors, int):
+            if self.number_of_floors != other.number_of_floors:
+                return True
+            else:
+                return False
 
     def __add__(self, other):
         if isinstance(self.number_of_floors, int):
@@ -66,12 +74,14 @@ class House:                                         # Создали Kласс 
             return self
 
     def __radd__(self, other):
-        self.number_of_floors += int(other)
-        return self
+        if isinstance(self.number_of_floors, int):
+            self.number_of_floors += int(other)
+            return self
 
     def __iadd__(self, other):
-        self.number_of_floors += int(other)
-        return self
+        if isinstance(self.number_of_floors, int):
+            self.number_of_floors += int(other)
+            return self
 
 h1 = House('ЖК Эльбрус', 10)
 h2 = House('ЖК Акация', 20)
