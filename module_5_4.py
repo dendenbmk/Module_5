@@ -20,7 +20,7 @@ class House:                                         # Создали Kласс 
              
             for i in range(1, namber_of_want_floor+1):
                 print(i)
-            print(namber_of_want_floor)            # выведим желаемый этаж
+            # print(namber_of_want_floor)            # выведим желаемый этаж
 
 
     def __len__(self):                     # Создали метод (волшебный) который возвращает кол-во этажей беря его из ...
