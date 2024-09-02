@@ -1,0 +1,51 @@
+class User:
+
+    def __init__(self, nickname, password, age):
+        self.nickname = nickname
+        self.password = password
+        self.age = age
+
+    def __str__(self):
+        return  self.nickname, self.password  #, self.age
+
+
+class Video:
+
+    def __init__(self, title, duration, time_now):
+        self.title = title
+        self.duration = duration
+        self.time_now = 0
+        self.adult_mode = False
+
+    def __str__(self):
+        return
+
+class UrTube:
+
+    def __init__(self, users, videos, current_user):
+        self.users =[]
+        self.videos = []
+        self.current_user = None
+
+    def register(self, nickname, password, age):
+        for user in self.users:
+            if nickname in user.nickname:
+                print(f'User with {nickname} we have yet')
+            else:
+                self.users.append()
+
+    def log_in(self, nickname, password):
+        for user in self.users:
+            print(user, nickname, password)
+            if nickname == user.nickname and password == self.user.password:
+                print('Пользователь идентифицирован')
+                self.current_user = user
+            else:
+                print('We did not find that nickname, You must register')
+
+
+us1 = User('den', 123, 20)
+print(us1)
+ur1 = UrTube
+
+# ur1.log_in('den', 123, 20)
